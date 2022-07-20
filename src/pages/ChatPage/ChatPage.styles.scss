@@ -1,10 +1,7 @@
 @import "../../styles/index";
 
 .chat-page {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: stretch;
-  align-items: stretch;
+  @include display(flex, column, nowrap, stretch, stretch);
   height: 100vh;
   width: calc(100% - #{2 * $size-wrapper-margin});
   margin: 0 auto;
@@ -39,4 +36,27 @@
   .chat-page {
     width: calc(100% - 350px);
   }
+}
+
+#loader {
+  border: 12px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 12px solid #444444;
+  width: 70px;
+  height: 70px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.chat-page__loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
