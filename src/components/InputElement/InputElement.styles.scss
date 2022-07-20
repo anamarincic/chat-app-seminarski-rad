@@ -1,7 +1,7 @@
-@import "../../styles/index";
+@import "../../styles/index.scss";
 
 .input-element {
-  @include shape('rounded-border');
+  @include shape("rounded-border");
   @include type;
   height: 40px;
   width: 100%;

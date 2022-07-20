@@ -1,10 +1,7 @@
 @import "../../styles/index";
 
 .message-metadata {
-  display: inline-flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: baseline;
+  @include display(inline-flex, row, nowrap, flex-start, baseline);
 
   &__display-name {
     @include type($font-weight: 700, $line-height: 24 / 16);

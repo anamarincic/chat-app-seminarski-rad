@@ -1,10 +1,10 @@
+@import "../../styles/index.scss";
+
 .join-form {
-  display: block;
-  width: 100%;
+  @include block;
 
   &__field {
-    display: block;
-    width: 100%;
+    @include block;
     margin-bottom: 16px;
 
     &:last-child {

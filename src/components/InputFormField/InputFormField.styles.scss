@@ -1,18 +1,15 @@
-@import "../../styles/index";
+@import "../../styles/index.scss";
 
 .input-form-field {
-  display: block;
-  width: 100%;
+  @include block;
 
   &__label {
     @include type($font-size: 1.4rem);
-    display: block;
-    width: 100%;
+    @include block;
     margin-bottom: 8px;
   }
 
   &__element {
-    display: block;
-    width: 100%;
+    @include block;
   }
 }

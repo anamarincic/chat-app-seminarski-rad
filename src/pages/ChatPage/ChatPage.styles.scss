@@ -34,3 +34,9 @@
     margin: 16px 0;
   }
 }
+
+@media (min-width: 1024px) {
+  .chat-page {
+    width: calc(100% - 350px);
+  }
+}

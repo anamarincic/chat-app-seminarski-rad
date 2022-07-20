@@ -1,17 +1,14 @@
-@import "../../styles/index";
+@import "../../styles/index.scss";
 
 .button {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
+  @include display(flex, row, nowrap, center, center);
   height: 40px;
   background-color: $color-theme;
 }
 
 .button.button--text {
   @include type($font-weight: 700);
-  @include shape('rounded');
+  @include shape("rounded");
   width: 100%;
   padding: 0 16px;
   color: $color-theme-inverted;
@@ -19,7 +16,7 @@
 }
 
 .button.button--icon {
-  @include shape('round');
+  @include shape("round");
   width: 40px;
 
   path {

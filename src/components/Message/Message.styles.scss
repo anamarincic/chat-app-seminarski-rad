@@ -1,8 +1,7 @@
+@import "../../styles/index.scss";
+
 .message {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: stretch;
-  align-items: flex-start;
+  @include display(flex, row, nowrap, stretch, flex-start);
 
   &__avatar {
     flex: 0 0 auto;

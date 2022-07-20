@@ -1,14 +1,12 @@
+@import "../../styles/index.scss";
+
 .message-form {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: stretch;
-  align-items: center;
+  @include display(flex, row, nowrap, stretch, center);
 
   &__input {
     flex: 1 1 auto;
     margin-right: 4px;
-    display: block;
-    width: 100%;
+    @include block;
   }
 
   &__button {
