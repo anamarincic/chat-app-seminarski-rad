@@ -12,8 +12,8 @@ export function ChatPage() {
   const [drone, setDrone] = useState(null);
   const [error, setError] = useState(null);
   const [joinedRoom, setJoinedRoom] = useState(false);
-  const [countMembers, setCountMembers] = useState([]);
-
+  const [countMember, setCountMember] = useState([]);
+  
   const sendMessage = (formState) => {
     const message = new MessageModel({
       messageText: formState.message,
@@ -22,7 +22,7 @@ export function ChatPage() {
 
     if (drone !== null) {
       drone.publish({
-        room: 'chat',
+        room: 'observable-chat',
         message: message,
       });
     }
@@ -36,7 +36,7 @@ export function ChatPage() {
   useEffect(() => {
     if (drone === null) return;
 
-    const room = drone.subscribe('chat');
+    const room = drone.subscribe('observable-chat');
 
     room.on('open', error => {
       if (error) {
@@ -53,29 +53,28 @@ export function ChatPage() {
         MessageModel.fromObject({ ...message.data, id: message.id })
       ]);
     });
-  }, [drone]);
 
-  useEffect(() => {
-    if(drone === null) return;
-
-    const observableRoom = drone.subscribe('observable-room');
-
-    observableRoom.on('open', function(error) {
-      if (error) {
-        return setError(error);
-      }
-      setJoinedRoom(true);
+    room.on('members', members => {
+      setCountMember([...members]); 
     });
 
-    observableRoom.on('members', members => {
-      setCountMembers((countMembers) => [
-        ...countMembers, members
-      ]);
-      
+    room.on('member_join', member => {
+      setCountMember((current)=>{
+        return [...current,member]
+      })
     });
+
+    room.on('member_leave', member => {
+      setCountMember((current) => {
+        return current.filter((leaveMember) => 
+          leaveMember.id !== member.id);
+      })
+    });
+
   }, [drone]);
 
-  console.log(countMembers);
+
+  const numOfMembers = countMember.length;
 
   return (
     <Component
@@ -84,7 +83,10 @@ export function ChatPage() {
       error={error}
       joinedRoom={joinedRoom}
       clearUser={clearUser}
-      member={countMembers.length}
+      numOfMembers={numOfMembers}
     />
   );
 }
+
+
+  

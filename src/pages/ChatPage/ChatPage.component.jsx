@@ -32,10 +32,9 @@ export function ChatPage(props) {
     </div>
   ));
 
-
   return (
     <div className="chat-page">
-      <div>{props.member}</div>
+      <div>{props.numOfMembers}</div>
       <div className="chat-page__navigation">
         <Navigation clearUser={props.clearUser}/>
       </div>
