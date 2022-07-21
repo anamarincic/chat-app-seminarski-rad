@@ -35,7 +35,7 @@ export function ChatPage(props) {
 
   return (
     <div className="chat-page">
-      
+      <div>{props.member}</div>
       <div className="chat-page__navigation">
         <Navigation clearUser={props.clearUser}/>
       </div>
