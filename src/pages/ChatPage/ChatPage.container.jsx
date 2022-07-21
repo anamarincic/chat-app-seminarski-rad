@@ -84,7 +84,7 @@ export function ChatPage() {
       error={error}
       joinedRoom={joinedRoom}
       clearUser={clearUser}
-      member={countMembers}
+      member={countMembers.length}
     />
   );
 }
