@@ -4,6 +4,7 @@ import { Message } from "../../components/Message";
 import { MessageForm } from "../../components/MessageForm";
 import { Button } from "../../components/Button";
 import { Navigation } from "../../components/Navigation";
+import { Icon } from "../../components/Icon";
 
 export function ChatPage(props) {
 
@@ -41,7 +42,10 @@ export function ChatPage(props) {
       <div className="chat-page__log-out">
         <Button variant="text" onClick={props.clearUser}>Log out</Button>
       </div>
-      <div className="chat-page__title">Chit - chat</div>
+      <div className="chat-page__title">
+        Travel experiences 
+        <Icon variant="send" />
+        </div>
       <div className="chat-page__message-list">
         {messageItems}
       </div>
