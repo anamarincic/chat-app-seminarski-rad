@@ -1,7 +1,6 @@
 import "./Menu.styles.scss";
 
 import { Button } from "../Button";
-import { useUser } from "../../contexts/UserContext";
 
 export function Menu(props){
 
