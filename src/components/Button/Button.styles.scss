@@ -8,7 +8,6 @@
 .button.button--text {
   @include type($font-weight: 700);
   @include shape("rounded");
-  width: 100%;
   padding: 0 16px;
   background-color: $color-background;
   border: 1px solid $color-theme;

@@ -10,7 +10,7 @@ export function JoinForm(props) {
       autoComplete="off"
       onSubmit={props.onSubmit}
     >
-      <div className="join-form__field">
+      <div className="join-form__input">
         <InputFormField
           label="Display name"
           name="displayName"
@@ -20,7 +20,7 @@ export function JoinForm(props) {
           required
         />
       </div>
-      <div className="join-form__field">
+      <div className="join-form__button">
         <Button variant="text">Join</Button>
       </div>
     </form>

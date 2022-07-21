@@ -1,0 +1,23 @@
+.nav-menu {
+  height: 100%;
+  width: 60%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  padding-top: 60px;
+  animation: open 1s ease both;
+}
+
+@keyframes open {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}

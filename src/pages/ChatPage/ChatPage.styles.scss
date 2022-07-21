@@ -6,6 +6,16 @@
   width: calc(100% - #{2 * $size-wrapper-margin});
   margin: 0 auto;
 
+  &__navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+  }
+
+  &__log-out {
+    display: none;
+  }
+
   &__title {
     @include type($font-size: 2.4rem, $font-weight: 700);
     flex: 0 0 auto;
@@ -35,6 +45,20 @@
 @media (min-width: 1024px) {
   .chat-page {
     width: calc(100% - 350px);
+
+    &__log-out {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 8px;
+
+      .button {
+        width: 9rem;
+      }
+    }
+
+    &__navigation {
+      display: none;
+    }
   }
 }
 

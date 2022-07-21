@@ -3,12 +3,18 @@
 .join-form {
   @include block;
 
-  &__field {
+  &__input {
     @include block;
     margin-bottom: 16px;
+  }
 
-    &:last-child {
-      margin-bottom: 0;
+  &__button {
+    @include block;
+    margin-bottom: 16px;
+    margin-bottom: 0;
+
+    .button {
+      width: 100%;
     }
   }
 }
