@@ -23,6 +23,16 @@
     text-align: center;
   }
 
+  &__members-number {
+    @include display(flex, row, nowrap, center, center);
+    color: $color-text;
+    background-color: $color-background;
+    border: 1px solid $color-theme;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
   &__message-list {
     flex: 1 1 auto;
     overflow-y: auto;

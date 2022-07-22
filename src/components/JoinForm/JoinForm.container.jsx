@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { JoinForm as Component } from "./JoinForm.component";
+
+import { useState } from "react";
 
 export function JoinForm(props) {
   const [state, setState] = useState({ displayName: '' });

@@ -1,4 +1,7 @@
-.nav-menu {
+@import "../../styles/index.scss";
+
+.navigation-menu {
+  @include display(flex, row, nowrap, center, flex-start);
   height: 100%;
   width: 60%;
   position: fixed;
@@ -9,6 +12,14 @@
   overflow-x: hidden;
   padding-top: 60px;
   animation: open 1s ease both;
+
+  .button.button--text {
+    background-color: white;
+
+    &:hover {
+      background-color: $color-theme;
+    }
+  }
 }
 
 @keyframes open {

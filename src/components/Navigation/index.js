@@ -1,1 +1,1 @@
-export { Navigation } from "./Navigation.jsx";
+export { Navigation } from "./Navigation.container";

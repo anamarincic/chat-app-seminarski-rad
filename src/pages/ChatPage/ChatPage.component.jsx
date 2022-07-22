@@ -4,7 +4,6 @@ import { Message } from "../../components/Message";
 import { MessageForm } from "../../components/MessageForm";
 import { Button } from "../../components/Button";
 import { Navigation } from "../../components/Navigation";
-import { Icon } from "../../components/Icon";
 
 export function ChatPage(props) {
 
@@ -35,17 +34,22 @@ export function ChatPage(props) {
 
   return (
     <div className="chat-page">
-      <div>{props.numOfMembers}</div>
       <div className="chat-page__navigation">
-        <Navigation clearUser={props.clearUser}/>
+        <Navigation 
+          clearUser={props.clearUser}
+        />
       </div>
       <div className="chat-page__log-out">
-        <Button variant="text" onClick={props.clearUser}>Log out</Button>
+        <Button variant="text" onClick={props.clearUser}>
+          Log out
+        </Button>
       </div>
       <div className="chat-page__title">
         Travel experiences 
-        <Icon variant="send" />
-        </div>
+      </div>
+      <span className="chat-page__members-number">
+        Active passenger: {props.numOfMembers}
+      </span>
       <div className="chat-page__message-list">
         {messageItems}
       </div>

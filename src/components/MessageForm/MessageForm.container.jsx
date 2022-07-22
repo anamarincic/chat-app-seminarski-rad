@@ -1,5 +1,6 @@
-import { useState } from "react";
 import { MessageForm as Component } from "./MessageForm.component";
+
+import { useState } from "react";
 
 const initialFormState = { message: '' };
 

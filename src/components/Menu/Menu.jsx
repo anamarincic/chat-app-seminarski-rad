@@ -5,8 +5,13 @@ import { Button } from "../Button";
 export function Menu(props){
 
     return (
-        <div className="nav-menu" >
-        <Button variant="text" onClick={props.onClick}>Log out</Button>
-        </div>
-    )
+      <div className="navigation-menu">
+        <Button 
+           variant="text"
+           onClick={props.onClick}
+        >
+            Log out
+        </Button>
+      </div>
+    );
 }
