@@ -1,6 +1,9 @@
 # Chat-app
 
-Real-time chat application with Scaledrone. Developed as part of Algebra`s Fronted developer course.
+Real-time chat application about travel experience with Scaledrone. 
+Mobile First Design. 
+Developed as part of Algebra`s Fronted developer course.
+
 
 [**Try me on Netlify**](https://app.netlify.com/sites/anam-seminarski-rad/overview)
 
