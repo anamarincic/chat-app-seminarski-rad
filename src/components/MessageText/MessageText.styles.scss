@@ -4,10 +4,10 @@
   &__content {
     @include type($line-height: 24 / 16);
     @include block;
-    width: 50%;
     background-color: rgba(90, 94, 95, 0.08);
-    width: max-content;
+    max-width: fit-content;
     border: 1px dotted $color-theme;
     border-radius: 20px;
+    padding: 8px;
   }
 }
