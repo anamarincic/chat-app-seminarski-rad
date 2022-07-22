@@ -15,7 +15,7 @@ export function ChatPage(props) {
 
   if (!props.joinedRoom) {
     return (
-      <div id="loader" className="chat-page__loader"></div>
+      <div className="chat-page__loader"><span id="loader" className="chat-page__loader-spin"></span></div>
     );
   }
 

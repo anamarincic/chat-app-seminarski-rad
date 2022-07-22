@@ -72,10 +72,25 @@
   }
 }
 
+.chat-page__loader {
+  background-color: $color-background;
+  width: auto;
+  height: 100vh;
+
+  &-spin {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
 #loader {
   border: 12px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 12px solid #444444;
+  border-top: 12px solid $color-theme;
   width: 70px;
   height: 70px;
   animation: spin 1s linear infinite;
@@ -85,12 +100,4 @@
   100% {
     transform: rotate(360deg);
   }
-}
-.chat-page__loader {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
 }
