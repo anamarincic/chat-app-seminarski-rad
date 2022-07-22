@@ -43,7 +43,11 @@ Build the project for production.
 - [x] Every chat room member is identifiable by name and colour
 - [x] Intergrate with Scaledrone to provide real-time chat functionality
 - [x] Host as GitHub repository
+- [x] Number of chat members
 
 ## Roadmap
 
 - [ ] "Typing..." indicator
+- [ ] "Left-right messages"
+- [ ] "Click on log-out button and leave chat-room (decreases chat members)
+- [ ] "Display the name of members who is join/left chat-room
