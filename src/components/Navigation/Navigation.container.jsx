@@ -16,7 +16,7 @@ export function Navigation(props){
     <Component 
       onClick={handleClick} 
       menu={menu} 
-      clearUser={props.clearUser}
+      clearUser={props.logOut}
     />
    );
 }

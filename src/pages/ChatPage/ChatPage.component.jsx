@@ -36,11 +36,11 @@ export function ChatPage(props) {
     <div className="chat-page">
       <div className="chat-page__navigation">
         <Navigation 
-          clearUser={props.clearUser}
+          logOut={props.logOut}
         />
       </div>
       <div className="chat-page__log-out">
-        <Button variant="text" onClick={props.clearUser}>
+        <Button variant="text" onClick={props.logOut}>
           Log out
         </Button>
       </div>

@@ -76,13 +76,19 @@ export function ChatPage() {
 
   const numOfMembers = countMember.length;
 
+  var closeRoom = (event) => {
+    console.log(event);
+    clearUser();
+    drone.close();
+  }
+
   return (
     <Component
       messages={state}
       onSendMessage={sendMessage}
       error={error}
       joinedRoom={joinedRoom}
-      clearUser={clearUser}
+      logOut={closeRoom}
       numOfMembers={numOfMembers}
     />
   );
